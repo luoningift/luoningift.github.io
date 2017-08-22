@@ -84,13 +84,16 @@
 
 
 
+<meta name="description" content="Php unpack12345678unpack — Unpack data from binary string说明array unpack ( string $format , string $data )Unpacks from a binary string into an array according to the given format.The unpacked data is s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="php和python的pack和unpack对应的char类型">
+<meta property="og:title" content="php和python的unpack对应的char类型">
 <meta property="og:url" content="http://yoursite.com/2017/06/01/20170608phpunpack/index.html">
 <meta property="og:site_name" content="罗宁的博客">
-<meta property="og:updated_time" content="2017-06-08T07:32:41.810Z">
+<meta property="og:description" content="Php unpack12345678unpack — Unpack data from binary string说明array unpack ( string $format , string $data )Unpacks from a binary string into an array according to the given format.The unpacked data is s">
+<meta property="og:updated_time" content="2017-08-22T03:47:56.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php和python的pack和unpack对应的char类型">
+<meta name="twitter:title" content="php和python的unpack对应的char类型">
+<meta name="twitter:description" content="Php unpack12345678unpack — Unpack data from binary string说明array unpack ( string $format , string $data )Unpacks from a binary string into an array according to the given format.The unpacked data is s">
 
 
 
@@ -124,7 +127,7 @@
 
 
 
-  <title> php和python的pack和unpack对应的char类型 | 罗宁的博客 </title>
+  <title> php和python的unpack对应的char类型 | 罗宁的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -269,7 +272,7 @@
             
             
               
-                php和python的pack和unpack对应的char类型
+                php和python的unpack对应的char类型
               
             
           </h1>
@@ -336,7 +339,9 @@
       
 
       
-        
+        <h3 id="Php-unpack"><a href="#Php-unpack" class="headerlink" title="Php unpack"></a>Php unpack</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">unpack — Unpack data from binary string</div><div class="line"></div><div class="line">说明</div><div class="line"></div><div class="line">array unpack ( string $format , string $data )</div><div class="line">Unpacks from a binary string into an array according to the given format.</div><div class="line"></div><div class="line">The unpacked data is stored in an associative array. To accomplish this you have to name the different format codes and separate them by a slash /. If a repeater argument is present, then each of the array keys will have a sequence number behind the given name.</div></pre></td></tr></table></figure>
+<h3 id="Python-unpack"><a href="#Python-unpack" class="headerlink" title="Python unpack"></a>Python unpack</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">struct.unpack(fmt, buffer)</div><div class="line">Unpack from the buffer buffer (presumably packed by pack(fmt, ...)) according to the format string fmt. The result is a tuple even if it contains exactly one item. The buffer’s size in bytes must match the size required by the format, as reflected by calcsize().</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//php a1 a2 a3 为$res的key值</span></div><div class="line">$res = unpack(<span class="string">"a3a1/aa2/a12a3/a8a4/aa5"</span>, $medInfo);</div><div class="line"><span class="comment">//python</span></div><div class="line">format1 = <span class="string">'3s1s12s8s1s'</span>;</div><div class="line">(a1, a2, a3, a4, a5, last) = struct.unpack(format1, filedata)</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -431,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/head.jpg"
@@ -443,7 +457,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -451,7 +465,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -460,7 +474,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -499,6 +513,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Php-unpack"><span class="nav-number">1.</span> <span class="nav-text">Php unpack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-unpack"><span class="nav-number">2.</span> <span class="nav-text">Python unpack</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
