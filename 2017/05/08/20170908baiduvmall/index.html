@@ -1,0 +1,669 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Lua," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="华为云网盘脚本1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lua脚本抓取百度和华为云网盘视频地址">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/20170908baiduvmall/index.html">
+<meta property="og:site_name" content="罗宁的博客">
+<meta property="og:description" content="华为云网盘脚本1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001">
+<meta property="og:updated_time" content="2017-09-08T15:12:17.268Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lua脚本抓取百度和华为云网盘视频地址">
+<meta name="twitter:description" content="华为云网盘脚本1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/08/20170908baiduvmall/"/>
+
+
+
+
+
+  <title> Lua脚本抓取百度和华为云网盘视频地址 | 罗宁的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">罗宁的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/20170908baiduvmall/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="罗宁">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="罗宁的博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="罗宁的博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Lua脚本抓取百度和华为云网盘视频地址
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-08T18:40:16+00:00">
+                2017-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lua/" itemprop="url" rel="index">
+                    <span itemprop="name">Lua</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="华为云网盘脚本"><a href="#华为云网盘脚本" class="headerlink" title="华为云网盘脚本"></a>华为云网盘脚本</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--</span></div><div class="line"><span class="comment">-- Created by IntelliJ IDEA.</span></div><div class="line"><span class="comment">-- User: root</span></div><div class="line"><span class="comment">-- Date: 14-1-8</span></div><div class="line"><span class="comment">-- Time: 下午7:27</span></div><div class="line"><span class="comment">-- To change this template use File | Settings | File Templates.</span></div><div class="line"><span class="comment">--</span></div><div class="line"><span class="keyword">local</span> mmdd5 = <span class="built_in">require</span>(<span class="string">"md5"</span>)</div><div class="line"><span class="keyword">local</span> base64 = <span class="built_in">require</span>(<span class="string">"mime"</span>)</div><div class="line"><span class="keyword">local</span> bit = <span class="built_in">require</span>(<span class="string">"bit"</span>)</div><div class="line"><span class="keyword">local</span> unicode = <span class="built_in">require</span>(<span class="string">"unicode"</span>)</div><div class="line"><span class="keyword">local</span> utf8 = unicode.utf8</div><div class="line"><span class="keyword">local</span> http = <span class="built_in">require</span>(<span class="string">"socket.http"</span>)</div><div class="line"><span class="keyword">local</span> ltn12 = <span class="built_in">require</span>(<span class="string">"ltn12"</span>)</div><div class="line"><span class="keyword">local</span> cjson = <span class="built_in">require</span>(<span class="string">"cjson"</span>)</div><div class="line"><span class="keyword">local</span> cjson2 = cjson.new()</div><div class="line"><span class="keyword">local</span> <span class="built_in">string</span> = <span class="built_in">require</span>(<span class="string">"string"</span>)</div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">---- error status</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="keyword">local</span> errorStatus = &#123;</div><div class="line">    [<span class="number">0x01</span>] = <span class="string">"get page failed"</span>,</div><div class="line">    [<span class="number">0x02</span>] = <span class="string">"parse page failed"</span>,</div><div class="line">    [<span class="number">0x03</span>] = <span class="string">"unknown error"</span>,</div><div class="line">    [<span class="number">0x04</span>] = <span class="string">"url is not right"</span>,</div><div class="line">    [<span class="number">0x05</span>] = <span class="string">"timeout"</span>,</div><div class="line">    [<span class="number">0x06</span>] = <span class="string">"video is not exists"</span>,</div><div class="line">    [<span class="number">0x07</span>] = <span class="string">"urls is empty"</span>,</div><div class="line">&#125;</div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- user-agent</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line">XP_USERAGENT = <span class="string">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)"</span></div><div class="line">PHONE_USERAGENT = <span class="string">"Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16"</span></div><div class="line">IPAD_USERAGENT = <span class="string">"Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B176 Safari/7534.48.3"</span></div><div class="line">FIREFOX_USERAGENT = <span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:16.0) Gecko/20100101 Firefox/16.0"</span></div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">---- 解密字符串</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">encypt</span><span class="params">(str, key)</span></span></div><div class="line">    <span class="keyword">local</span> str = base64.unb64(str)</div><div class="line">    <span class="keyword">local</span> flag = <span class="built_in">string</span>.sub(key, <span class="number">0</span>, <span class="number">2</span>)</div><div class="line">    <span class="keyword">local</span> result = flag</div><div class="line">    <span class="keyword">if</span> flag == <span class="string">"ea"</span> <span class="keyword">then</span></div><div class="line">        result = str</div><div class="line">    <span class="keyword">elseif</span> flag == <span class="string">"eb"</span> <span class="keyword">then</span></div><div class="line">        result = bbSecond(str, ccFirst(key, key));</div><div class="line">    <span class="keyword">elseif</span> flag == <span class="string">"ed"</span> <span class="keyword">then</span></div><div class="line">        result = bbSecond(str, mmdd5.sumhexa(key));</div><div class="line">    <span class="keyword">else</span></div><div class="line">        result = str</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> result</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ccFirst</span><span class="params">(h, l)</span></span></div><div class="line">    <span class="keyword">local</span> k = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> e = <span class="number">0</span></div><div class="line">    <span class="keyword">local</span> g = <span class="string">""</span></div><div class="line">    <span class="keyword">local</span> hh = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> ll = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i = <span class="number">1</span>, #h <span class="keyword">do</span></div><div class="line">        hh[i] = <span class="built_in">string</span>.sub(h, i, i)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">for</span> i = <span class="number">1</span>, #l <span class="keyword">do</span></div><div class="line">        ll[i] = <span class="built_in">string</span>.sub(h, i, i)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">for</span> f = <span class="number">1</span>, <span class="number">256</span> <span class="keyword">do</span></div><div class="line">        k[f] = f;</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> d</div><div class="line">    <span class="keyword">for</span> f = <span class="number">1</span>, <span class="number">256</span> <span class="keyword">do</span></div><div class="line">        e = (e + k[f] + utf8.byte(h[(f - <span class="number">1</span>) % #h + <span class="number">1</span>])) % <span class="number">256</span></div><div class="line">        d = k[f]</div><div class="line">        k[f] = k[e + <span class="number">1</span>]</div><div class="line">        k[e + <span class="number">1</span>] = d</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> f = <span class="number">0</span></div><div class="line">    <span class="keyword">local</span> e = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> m = <span class="number">1</span>, #l <span class="keyword">do</span></div><div class="line">        f = (f + <span class="number">1</span>) % <span class="number">256</span></div><div class="line">        e = (e + k[f + <span class="number">1</span>]) % <span class="number">256</span></div><div class="line">        d = k[f + <span class="number">1</span>]</div><div class="line">        k[f + <span class="number">1</span>] = k[e + <span class="number">1</span>]</div><div class="line">        k[e + <span class="number">1</span>] = d</div><div class="line">        g = g .. utf8.char(bit.bxor(utf8.byte(ll[m]), k[(k[f + <span class="number">1</span>] + k[e + <span class="number">1</span>]) % <span class="number">256</span> + <span class="number">1</span>]))</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> g;</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bbSecond</span><span class="params">(string64, key)</span></span></div><div class="line">    <span class="keyword">local</span> length = #string64</div><div class="line">    <span class="keyword">local</span> k = #key</div><div class="line">    <span class="keyword">local</span> strTable = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> keyTable = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> result = <span class="string">""</span></div><div class="line">    <span class="keyword">local</span> j</div><div class="line">    <span class="keyword">local</span> m</div><div class="line">    <span class="keyword">for</span> i = <span class="number">1</span>, length <span class="keyword">do</span></div><div class="line">        strTable[i] = <span class="built_in">string</span>.sub(string64, i, i)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">for</span> i = <span class="number">1</span>, k <span class="keyword">do</span></div><div class="line">        keyTable[i] = <span class="built_in">string</span>.sub(key, i, i)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">pairs</span>(strTable) <span class="keyword">do</span></div><div class="line">        m = keyTable[((i - <span class="number">1</span>) % k + <span class="number">1</span>)]</div><div class="line">        j = bit.bxor(utf8.byte(v), utf8.byte(m))</div><div class="line">        result = result .. utf8.char(j)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> result</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- 抓取url</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchUrl</span><span class="params">(url, userAgent, sessioncookie, postData, proxy)</span></span></div><div class="line">    <span class="keyword">local</span> t = &#123;&#125;</div><div class="line">    <span class="comment">--header头</span></div><div class="line">    <span class="keyword">local</span> headers = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> url = url</div><div class="line">    headers[<span class="string">"Cookie"</span>] = sessioncookie</div><div class="line">    <span class="comment">--设置agent</span></div><div class="line">    <span class="keyword">if</span> userAgent ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        headers[<span class="string">"User-Agent"</span>] = userAgent</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="comment">--postData</span></div><div class="line">    <span class="keyword">local</span> r, c, h</div><div class="line">    <span class="keyword">if</span> postData == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">local</span> requestData = &#123;</div><div class="line">            url = url,</div><div class="line">            sink = ltn12.sink.<span class="built_in">table</span>(t),</div><div class="line">            headers = headers,</div><div class="line">            method = <span class="string">"GET"</span>,</div><div class="line">            timeout = <span class="number">5</span>,</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> proxy ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">            requestData[<span class="string">"proxy"</span>] = proxy</div><div class="line">        <span class="keyword">end</span></div><div class="line">        r, c, h = http.request(requestData)</div><div class="line">    <span class="keyword">else</span></div><div class="line">        headers[<span class="string">"Content-Type"</span>] = <span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">        headers[<span class="string">"Content-Length"</span>] = <span class="built_in">string</span>.len(postData)</div><div class="line">        <span class="keyword">local</span> requestData = &#123;</div><div class="line">            url = url,</div><div class="line">            source = ltn12.source.<span class="built_in">string</span>(postData),</div><div class="line">            sink = ltn12.sink.<span class="built_in">table</span>(t),</div><div class="line">            method = <span class="string">"POST"</span>,</div><div class="line">            headers = headers,</div><div class="line">            timeout = <span class="number">5</span>,</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> proxy ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">            requestData[<span class="string">"proxy"</span>] = proxy</div><div class="line">        <span class="keyword">end</span></div><div class="line">        r, c, h = http.request(requestData, postData)</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    r = <span class="built_in">table</span>.concat(t, <span class="string">""</span>)</div><div class="line">    <span class="keyword">local</span> cookie</div><div class="line">    <span class="keyword">local</span> location</div><div class="line">    <span class="keyword">if</span> (h) <span class="keyword">then</span></div><div class="line">        t = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(h) <span class="keyword">do</span></div><div class="line">            <span class="comment">--print(k .. "----" .. v)</span></div><div class="line">            <span class="keyword">if</span> k == <span class="string">"set-cookie"</span> <span class="keyword">then</span></div><div class="line">                v = <span class="built_in">string</span>.gsub(v, <span class="string">"(expires=.-; )"</span>, <span class="string">""</span>)</div><div class="line">                v = v .. <span class="string">", "</span></div><div class="line">                <span class="keyword">for</span> cookie <span class="keyword">in</span> <span class="built_in">string</span>.gmatch(v, <span class="string">"(.-), "</span>) <span class="keyword">do</span></div><div class="line">                    cookie = <span class="built_in">string</span>.match(cookie, <span class="string">"(.-);"</span>)</div><div class="line">                    <span class="built_in">table</span>.insert(t, cookie)</div><div class="line">                <span class="keyword">end</span></div><div class="line">            <span class="keyword">end</span></div><div class="line">            <span class="keyword">if</span> k == <span class="string">"location"</span> <span class="keyword">then</span></div><div class="line">                location = v;</div><div class="line">            <span class="keyword">end</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        cookie = <span class="built_in">table</span>.concat(t, <span class="string">"; "</span>)</div><div class="line">    <span class="keyword">else</span></div><div class="line">        cookie = <span class="keyword">nil</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> r, c, cookie, location</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByUrl</span><span class="params">(url)</span></span></div><div class="line">    <span class="keyword">local</span> errorMsg = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> content = fetchUrl(url, FIREFOX_USERAGENT)</div><div class="line">    <span class="keyword">if</span> content == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x01</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x01</span>] &#125;</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="comment">--errorMsg['content'] = content</span></div><div class="line">    <span class="keyword">local</span> a1, b1 = <span class="built_in">string</span>.find(content, <span class="string">'var globallinkdata = '</span>)</div><div class="line">    <span class="keyword">local</span> a2, b2 = <span class="built_in">string</span>.find(content, <span class="string">"&#125;&#125;&#125;"</span>)</div><div class="line">    <span class="keyword">if</span> b1 == <span class="keyword">nil</span> <span class="keyword">or</span> a2 == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> jsonStr = <span class="built_in">string</span>.sub(content, b1 + <span class="number">1</span>, a2 + <span class="number">2</span>)</div><div class="line">    jsonStr = cjson2.decode(jsonStr)</div><div class="line">    <span class="keyword">if</span> jsonStr == <span class="keyword">nil</span> <span class="keyword">or</span> jsonStr[<span class="string">'retcode'</span>] ~= <span class="string">'0000'</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> downUrl = jsonStr[<span class="string">'data'</span>][<span class="string">'resource'</span>][<span class="string">'files'</span>][<span class="number">1</span>][<span class="string">'downloadurl'</span>]</div><div class="line">    <span class="keyword">local</span> key = jsonStr[<span class="string">'data'</span>][<span class="string">'encryKey'</span>]</div><div class="line">    <span class="comment">--print(key)</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> downUrl == <span class="keyword">nil</span> <span class="keyword">or</span> key == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> res = encypt(downUrl, key);</div><div class="line">    a1, b1 = <span class="built_in">string</span>.find(res, <span class="string">"vmall"</span>)</div><div class="line">    <span class="keyword">if</span> a1 == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="built_in">print</span>(res)</div><div class="line"></div><div class="line">    <span class="keyword">local</span> result = &#123;</div><div class="line">        [<span class="string">"result"</span>] = &#123;</div><div class="line">            [<span class="string">"shd"</span>] = res</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">--检查链接是否为空</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> checkUrlsType(result[<span class="string">'result'</span>]) <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x07</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x07</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="comment">--print(res)</span></div><div class="line">    <span class="keyword">return</span> &#123;[<span class="string">"code"</span>] = <span class="number">0</span>, [<span class="string">"content"</span>] = result&#125;</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="comment">--检查是否有空链接</span></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkUrlsType</span><span class="params">(urls)</span></span></div><div class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(urls) ~= <span class="string">'table'</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">local</span> urlsMaps = &#123;<span class="string">'sd'</span>, <span class="string">'shd'</span>, <span class="string">'hd'</span>, <span class="string">'ori'</span>&#125;</div><div class="line">    <span class="keyword">for</span> _, <span class="built_in">type</span> <span class="keyword">in</span> <span class="built_in">pairs</span>(urlsMaps) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> checkIsset(urls, <span class="built_in">type</span>) <span class="keyword">then</span></div><div class="line">            i = i + <span class="number">1</span>;</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="comment">--检查table中是否有某个值</span></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkIsset</span><span class="params">(checkTable, item)</span></span></div><div class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(checkTable) ~= <span class="string">'table'</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> flag = <span class="keyword">false</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">pairs</span>(checkTable) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> key == item <span class="keyword">then</span></div><div class="line">            flag = <span class="keyword">true</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> flag</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">---------------------------</span></div><div class="line"><span class="comment">-- getByUrlJson</span></div><div class="line"><span class="comment">---------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByUrlJson</span><span class="params">(params)</span></span></div><div class="line">    <span class="keyword">local</span> params = cjson2.decode(params)</div><div class="line">    <span class="keyword">local</span> result, errorMsg = getByUrl(params[<span class="string">'url'</span>])</div><div class="line">    <span class="keyword">local</span> res</div><div class="line">    <span class="keyword">local</span> info = &#123;&#125;;</div><div class="line">    <span class="keyword">if</span> params[<span class="string">'server'</span>] == <span class="number">1</span> <span class="keyword">or</span> params[<span class="string">'errorVate'</span>] == <span class="number">1</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">if</span> result[<span class="string">"code"</span>] == <span class="number">0</span> <span class="keyword">then</span></div><div class="line">            info[<span class="string">"type"</span>] = params[<span class="string">"type"</span>]</div><div class="line">            info[<span class="string">"site"</span>] = params[<span class="string">"site"</span>]</div><div class="line">            info[<span class="string">"meid"</span>] = params[<span class="string">"meid"</span>]</div><div class="line">            info[<span class="string">"mid"</span>] = params[<span class="string">"mid"</span>]</div><div class="line">            info[<span class="string">"vate"</span>] = params[<span class="string">"server"</span>]</div><div class="line">            info[<span class="string">"result"</span>] = result[<span class="string">"content"</span>][<span class="string">"result"</span>]</div><div class="line">        <span class="keyword">else</span></div><div class="line">            info[<span class="string">"msg"</span>] = result[<span class="string">"error"</span>]</div><div class="line">            info[<span class="string">"site"</span>] = params[<span class="string">"site"</span>]</div><div class="line">            info[<span class="string">"url"</span>] = params[<span class="string">"url"</span>]</div><div class="line">            info[<span class="string">"vate"</span>] = params[<span class="string">"errorVate"</span>]</div><div class="line">            <span class="keyword">if</span> <span class="keyword">true</span> <span class="keyword">and</span> errorMsg ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">                info[<span class="string">'errorMsg'</span>] = errorMsg</div><div class="line">            <span class="keyword">end</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        info[<span class="string">"domain"</span>] = params[<span class="string">"domain"</span>]</div><div class="line">        info[<span class="string">"code"</span>] = result[<span class="string">"code"</span>]</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">if</span> result[<span class="string">"code"</span>] == <span class="number">0</span> <span class="keyword">then</span></div><div class="line"></div><div class="line">        <span class="keyword">local</span> msg = &#123;&#125;</div><div class="line">        <span class="keyword">local</span> i = <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(result[<span class="string">"content"</span>][<span class="string">"result"</span>]) <span class="keyword">do</span></div><div class="line">            msg[i] = &#123; [<span class="string">"format"</span>] = k, [<span class="string">"url"</span>] = v, [<span class="string">"urlType"</span>] = <span class="number">0</span> &#125;</div><div class="line">            i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        res = &#123; [<span class="string">"code"</span>] = <span class="number">0</span>, [<span class="string">"msg"</span>] = msg, [<span class="string">"postToServer"</span>] = info &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        res = &#123; [<span class="string">"code"</span>] = result[<span class="string">"code"</span>], [<span class="string">"error"</span>] = result[<span class="string">"error"</span>] , [<span class="string">"postToServer"</span>] = info&#125;</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> cjson2.encode(res)</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">local</span> result = getByUrl(<span class="string">'http://dl.vmall.com/c0kn104gzf#'</span>)</div></pre></td></tr></table></figure>
+<h3 id="抓取百度云脚本"><a href="#抓取百度云脚本" class="headerlink" title="抓取百度云脚本"></a>抓取百度云脚本</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- 百度云抓取</span></div><div class="line"><span class="comment">-- User: luoning</span></div><div class="line"><span class="comment">-- Date: 14-1-7</span></div><div class="line"><span class="comment">-- Time: 上午11:41</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="keyword">local</span> http = <span class="built_in">require</span>(<span class="string">"socket.http"</span>)</div><div class="line"><span class="keyword">local</span> ltn12 = <span class="built_in">require</span>(<span class="string">"ltn12"</span>)</div><div class="line"><span class="keyword">local</span> cjson = <span class="built_in">require</span>(<span class="string">"cjson"</span>)</div><div class="line"><span class="keyword">local</span> cjson2 = cjson.new()</div><div class="line"><span class="keyword">local</span> <span class="built_in">string</span> = <span class="built_in">require</span>(<span class="string">"string"</span>)</div><div class="line"><span class="keyword">local</span> <span class="built_in">table</span> = <span class="built_in">require</span>(<span class="string">"table"</span>)</div><div class="line"><span class="keyword">local</span> base64 = <span class="built_in">require</span>(<span class="string">"mime"</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">---- error status</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- DOMAIN_URL = "http://api.wanhuatong.tv/lua/getvideo"</span></div><div class="line">DOMAIN_URL = <span class="string">"http://http:192.168.1.65:81/lua/getvideo"</span></div><div class="line"><span class="keyword">local</span> errorStatus = &#123;</div><div class="line">    [<span class="number">0x01</span>] = <span class="string">"get page failed"</span>,</div><div class="line">    [<span class="number">0x02</span>] = <span class="string">"parse page failed"</span>,</div><div class="line">    [<span class="number">0x03</span>] = <span class="string">"unknown error"</span>,</div><div class="line">    [<span class="number">0x04</span>] = <span class="string">"url is not right"</span>,</div><div class="line">    [<span class="number">0x05</span>] = <span class="string">"timeout"</span>,</div><div class="line">    [<span class="number">0x06</span>] = <span class="string">"video is not exists"</span>,</div><div class="line">    [<span class="number">0x07</span>] = <span class="string">"urls is empty"</span>,</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- user-agent</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line">XP_USERAGENT = <span class="string">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)"</span></div><div class="line">PHONE_USERAGENT = <span class="string">"Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16"</span></div><div class="line">IPAD_USERAGENT = <span class="string">"Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B176 Safari/7534.48.3"</span></div><div class="line">FIREFOX_USERAGENT = <span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:16.0) Gecko/20100101 Firefox/16.0"</span></div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- 抓取百度云</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByUrl</span><span class="params">(url, code)</span></span></div><div class="line">    <span class="keyword">local</span> errorMsg = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> tmpUrl = url</div><div class="line">    <span class="keyword">local</span> content, status, cookie, location = fetchUrl(url, FIREFOX_USERAGENT);</div><div class="line"></div><div class="line">    <span class="keyword">if</span> content == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x01</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x01</span>] &#125;;</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="comment">--errorMsg['content'] = content</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> urlf = <span class="built_in">string</span>.find(url, <span class="string">"shareid="</span>)</div><div class="line">    <span class="keyword">if</span> urlf == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">if</span> location ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">            tmpUrl = location</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">local</span> a1, b1 = <span class="built_in">string</span>.find(content, <span class="string">"FileUtils.share_uk\=\""</span>)</div><div class="line">            <span class="keyword">local</span> a2, b2 = <span class="built_in">string</span>.find(content, <span class="string">"\"\;FileUtils.share_id\=\""</span>)</div><div class="line">            <span class="keyword">local</span> a3, b3 = <span class="built_in">string</span>.find(content, <span class="string">"\"\;FileUtils.share_sekey\="</span>)</div><div class="line">            <span class="keyword">local</span> uk = <span class="built_in">string</span>.sub(content, b1 + <span class="number">1</span>, a2 - <span class="number">1</span>)</div><div class="line">            <span class="keyword">local</span> shareid = <span class="built_in">string</span>.sub(content, b2 + <span class="number">1</span>, a3 - <span class="number">1</span>)</div><div class="line">            tmpUrl = <span class="string">"?shareid="</span> .. shareid .. <span class="string">"&amp;uk="</span> .. uk</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    urlf = <span class="built_in">string</span>.find(tmpUrl, <span class="string">"shareid="</span>)</div><div class="line">    <span class="keyword">if</span> urlf == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">2</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">2</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line">    urlf = <span class="built_in">string</span>.find(tmpUrl, <span class="string">"?"</span>)</div><div class="line">    <span class="keyword">local</span> headerStr</div><div class="line">    <span class="keyword">if</span> code ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">local</span> postData = <span class="string">"pwd="</span> .. code .. <span class="string">"&amp;vcode="</span></div><div class="line">        <span class="keyword">local</span> verfyUrl = <span class="string">"http://pan.baidu.com/share/verify"</span> .. <span class="built_in">string</span>.sub(url, urlf, #url)</div><div class="line">        content, status, cookie = fetchUrl(verfyUrl, PHONE_USERAGENT, <span class="keyword">nil</span>, postData)</div><div class="line">        content = fetchUrl(url, FIREFOX_USERAGENT, cookie);</div><div class="line">        headerStr = cookie</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="comment">--得到fid，sign，time</span></div><div class="line">    <span class="keyword">local</span> f1, s1 = <span class="built_in">string</span>.find(content, <span class="string">"\\\"fs_id\\\":\\\""</span>)</div><div class="line">    <span class="keyword">local</span> f2, s2 = <span class="built_in">string</span>.find(content, <span class="string">"\\\",\\\"app_id\\\""</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span> s1 == <span class="keyword">nil</span> <span class="keyword">or</span> f2 == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        errorMsg[<span class="string">'secondContent'</span>] = content</div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> fid = <span class="built_in">string</span>.sub(content, s1 + <span class="number">1</span>, f2 - <span class="number">1</span>)</div><div class="line"></div><div class="line">    f1, s1 = <span class="built_in">string</span>.find(content, <span class="string">"FileUtils.share_timestamp=\""</span>)</div><div class="line">    f2, s2 = <span class="built_in">string</span>.find(content, <span class="string">"\";FileUtils.share_sign=\""</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span> s1 == <span class="keyword">nil</span> <span class="keyword">or</span> f2 == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> stime = <span class="built_in">string</span>.sub(content, s1 + <span class="number">1</span>, f2 - <span class="number">1</span>)</div><div class="line">    <span class="keyword">local</span> f3, s3 = <span class="built_in">string</span>.find(content, <span class="string">"\";disk.ui.Utilities.BETA_STR"</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span> f3 == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> sign = <span class="built_in">string</span>.sub(content, s2 + <span class="number">1</span>, f3 - <span class="number">1</span>)</div><div class="line">    <span class="keyword">local</span> tmpJsonUrl = <span class="string">"http://pan.baidu.com/share/download?"</span> .. <span class="built_in">string</span>.sub(tmpUrl, urlf + <span class="number">1</span>) .. <span class="string">"&amp;fid_list="</span> .. escapes(<span class="string">"["</span> .. fid .. <span class="string">"]"</span>) .. <span class="string">"&amp;sign="</span> .. sign .. <span class="string">"&amp;timestamp="</span> .. stime</div><div class="line">    <span class="keyword">local</span> tmpJsonResult = fetchUrl(tmpJsonUrl, PHONE_USERAGENT, headerStr)</div><div class="line">    <span class="keyword">local</span> tmpJsonTable = cjson.decode(tmpJsonResult)</div><div class="line">    <span class="keyword">if</span> tmpJsonTable[<span class="string">"img"</span>] ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        errorMsg[<span class="string">'thrCon'</span>] = tmpJsonResult;</div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="keyword">local</span> result = &#123;&#125;</div><div class="line">    <span class="keyword">if</span> tmpJsonTable[<span class="string">"dlink"</span>] ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        result[<span class="string">'result'</span>] = &#123; [<span class="string">"shd"</span>] = tmpJsonTable[<span class="string">"dlink"</span>] &#125;</div><div class="line">        <span class="comment">--检查链接是否为空</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> checkUrlsType(result[<span class="string">'result'</span>]) <span class="keyword">then</span></div><div class="line">            <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x07</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x07</span>] &#125;, errorMsg</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0x02</span>, [<span class="string">"error"</span>] = errorStatus[<span class="number">0x02</span>] &#125;, errorMsg</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> &#123; [<span class="string">"code"</span>] = <span class="number">0</span>, [<span class="string">"content"</span>] = result &#125;</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="comment">--检查是否有空链接</span></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkUrlsType</span><span class="params">(urls)</span></span></div><div class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(urls) ~= <span class="string">'table'</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">local</span> urlsMaps = &#123;<span class="string">'sd'</span>, <span class="string">'shd'</span>, <span class="string">'hd'</span>, <span class="string">'ori'</span>&#125;</div><div class="line">    <span class="keyword">for</span> _, <span class="built_in">type</span> <span class="keyword">in</span> <span class="built_in">pairs</span>(urlsMaps) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> checkIsset(urls, <span class="built_in">type</span>) <span class="keyword">then</span></div><div class="line">            i = i + <span class="number">1</span>;</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="comment">--检查table中是否有某个值</span></div><div class="line"><span class="comment">-------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkIsset</span><span class="params">(checkTable, item)</span></span></div><div class="line">    <span class="keyword">if</span> <span class="built_in">type</span>(checkTable) ~= <span class="string">'table'</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">local</span> flag = <span class="keyword">false</span></div><div class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">pairs</span>(checkTable) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> key == item <span class="keyword">then</span></div><div class="line">            flag = <span class="keyword">true</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> flag</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="comment">-- 抓取url</span></div><div class="line"><span class="comment">--------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchUrl</span><span class="params">(url, userAgent, sessioncookie, postData, proxy)</span></span></div><div class="line">    <span class="keyword">local</span> t = &#123;&#125;</div><div class="line">    <span class="comment">--header头</span></div><div class="line">    <span class="keyword">local</span> headers = &#123;&#125;</div><div class="line">    <span class="keyword">local</span> url = url</div><div class="line">    headers[<span class="string">"Cookie"</span>] = sessioncookie</div><div class="line">    <span class="comment">--设置agent</span></div><div class="line">    <span class="keyword">if</span> userAgent ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        headers[<span class="string">"User-Agent"</span>] = userAgent</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    <span class="comment">--postData</span></div><div class="line">    <span class="keyword">local</span> r, c, h</div><div class="line">    <span class="keyword">if</span> postData == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">local</span> requestData = &#123;</div><div class="line">            url = url,</div><div class="line">            sink = ltn12.sink.<span class="built_in">table</span>(t),</div><div class="line">            headers = headers,</div><div class="line">            method = <span class="string">"GET"</span>,</div><div class="line">            timeout = <span class="number">5</span>,</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> proxy ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">            requestData[<span class="string">"proxy"</span>] = proxy</div><div class="line">        <span class="keyword">end</span></div><div class="line">        r, c, h = http.request(requestData)</div><div class="line">    <span class="keyword">else</span></div><div class="line">        headers[<span class="string">"Content-Type"</span>] = <span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">        headers[<span class="string">"Content-Length"</span>] = <span class="built_in">string</span>.len(postData)</div><div class="line">        <span class="keyword">local</span> requestData = &#123;</div><div class="line">            url = url,</div><div class="line">            source = ltn12.source.<span class="built_in">string</span>(postData),</div><div class="line">            sink = ltn12.sink.<span class="built_in">table</span>(t),</div><div class="line">            method = <span class="string">"POST"</span>,</div><div class="line">            headers = headers,</div><div class="line">            timeout = <span class="number">5</span>,</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> proxy ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">            requestData[<span class="string">"proxy"</span>] = proxy</div><div class="line">        <span class="keyword">end</span></div><div class="line">        r, c, h = http.request(requestData, postData)</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    r = <span class="built_in">table</span>.concat(t, <span class="string">""</span>)</div><div class="line">    <span class="keyword">local</span> cookie</div><div class="line">    <span class="keyword">local</span> location</div><div class="line">    <span class="keyword">if</span> (h) <span class="keyword">then</span></div><div class="line">        t = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(h) <span class="keyword">do</span></div><div class="line">            <span class="comment">--print(k .. "----" .. v)</span></div><div class="line">            <span class="keyword">if</span> k == <span class="string">"set-cookie"</span> <span class="keyword">then</span></div><div class="line">                v = <span class="built_in">string</span>.gsub(v, <span class="string">"(expires=.-; )"</span>, <span class="string">""</span>)</div><div class="line">                v = v .. <span class="string">", "</span></div><div class="line">                <span class="keyword">for</span> cookie <span class="keyword">in</span> <span class="built_in">string</span>.gmatch(v, <span class="string">"(.-), "</span>) <span class="keyword">do</span></div><div class="line">                    cookie = <span class="built_in">string</span>.match(cookie, <span class="string">"(.-);"</span>)</div><div class="line">                    <span class="built_in">table</span>.insert(t, cookie)</div><div class="line">                <span class="keyword">end</span></div><div class="line">            <span class="keyword">end</span></div><div class="line">            <span class="keyword">if</span> k == <span class="string">"location"</span> <span class="keyword">then</span></div><div class="line">                location = v;</div><div class="line">            <span class="keyword">end</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        cookie = <span class="built_in">table</span>.concat(t, <span class="string">"; "</span>)</div><div class="line">    <span class="keyword">else</span></div><div class="line">        cookie = <span class="keyword">nil</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> r, c, cookie, location</div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="comment">---------------------------------------</span></div><div class="line"><span class="comment">-- urlencode</span></div><div class="line"><span class="comment">---------------------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">escapes</span><span class="params">(s)</span></span></div><div class="line">    <span class="keyword">return</span> <span class="built_in">string</span>.gsub(s, <span class="string">"([^A-Za-z0-9_])"</span>, <span class="function"><span class="keyword">function</span><span class="params">(c)</span></span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">string</span>.format(<span class="string">"%%%02x"</span>, <span class="built_in">string</span>.byte(c))</div><div class="line">    <span class="keyword">end</span>)</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="comment">---------------------------</span></div><div class="line"><span class="comment">-- getByUrlJson</span></div><div class="line"><span class="comment">---------------------------</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByUrlJson</span><span class="params">(params)</span></span></div><div class="line">    <span class="keyword">local</span> params = cjson2.decode(params)</div><div class="line">    <span class="keyword">local</span> result, errorMsg = getByUrl(params[<span class="string">'url'</span>], params[<span class="string">'code'</span>])</div><div class="line">    <span class="keyword">local</span> res</div><div class="line">    <span class="keyword">local</span> info = &#123;&#125;;</div><div class="line">    <span class="keyword">if</span> params[<span class="string">'server'</span>] == <span class="number">1</span> <span class="keyword">or</span> params[<span class="string">'errorVate'</span>] == <span class="number">1</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">if</span> result[<span class="string">"code"</span>] == <span class="number">0</span> <span class="keyword">then</span></div><div class="line">            info[<span class="string">"type"</span>] = params[<span class="string">"type"</span>]</div><div class="line">            info[<span class="string">"site"</span>] = params[<span class="string">"site"</span>]</div><div class="line">            info[<span class="string">"meid"</span>] = params[<span class="string">"meid"</span>]</div><div class="line">            info[<span class="string">"mid"</span>] = params[<span class="string">"mid"</span>]</div><div class="line">            info[<span class="string">"vate"</span>] = params[<span class="string">"server"</span>]</div><div class="line">            info[<span class="string">"result"</span>] = result[<span class="string">"content"</span>][<span class="string">"result"</span>]</div><div class="line">        <span class="keyword">else</span></div><div class="line">            info[<span class="string">"msg"</span>] = result[<span class="string">"error"</span>]</div><div class="line">            info[<span class="string">"site"</span>] = params[<span class="string">"site"</span>]</div><div class="line">            info[<span class="string">"url"</span>] = params[<span class="string">"url"</span>]</div><div class="line">            info[<span class="string">"vate"</span>] = params[<span class="string">"errorVate"</span>]</div><div class="line">            <span class="keyword">if</span> <span class="keyword">true</span> <span class="keyword">and</span> errorMsg ~= <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">                info[<span class="string">'errorMsg'</span>] = errorMsg</div><div class="line">            <span class="keyword">end</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        info[<span class="string">"domain"</span>] = params[<span class="string">"domain"</span>]</div><div class="line">        info[<span class="string">"code"</span>] = result[<span class="string">"code"</span>]</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">if</span> result[<span class="string">"code"</span>] == <span class="number">0</span> <span class="keyword">then</span></div><div class="line"></div><div class="line">        <span class="keyword">local</span> msg = &#123;&#125;</div><div class="line">        <span class="keyword">local</span> i = <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(result[<span class="string">"content"</span>][<span class="string">"result"</span>]) <span class="keyword">do</span></div><div class="line">            msg[i] = &#123; [<span class="string">"format"</span>] = k, [<span class="string">"url"</span>] = v, [<span class="string">"urlType"</span>] = <span class="number">0</span> &#125;</div><div class="line">            i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        res = &#123; [<span class="string">"code"</span>] = <span class="number">0</span>, [<span class="string">"msg"</span>] = msg, [<span class="string">"postToServer"</span>] = info &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        res = &#123; [<span class="string">"code"</span>] = result[<span class="string">"code"</span>], [<span class="string">"error"</span>] = result[<span class="string">"error"</span>], [<span class="string">"postToServer"</span>] = info &#125;</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> cjson2.encode(res)</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">-----------------------------------</span></div><div class="line"><span class="comment">-- test</span></div><div class="line"><span class="comment">-----------------------------------</span></div><div class="line"><span class="comment">--getByUrl("http://pan.baidu.com/s/1mgiCtXQ", "5m6w")</span></div><div class="line"><span class="comment">-- result = getByUrl("http://pan.baidu.com/share/init?shareid=206527666&amp;uk=3540312294", "3udl")</span></div><div class="line"><span class="comment">--result = getByUrl("http://pan.baidu.com/share/init?shareid=3239464838&amp;uk=3540312294", "y887");</span></div><div class="line"><span class="comment">--print(result)</span></div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Lua/" rel="tag"># Lua</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/20161221phpnginxpathinfo/" rel="next" title="php pathinfo 以php为后缀的时候nginx配置修改">
+                <i class="fa fa-chevron-left"></i> php pathinfo 以php为后缀的时候nginx配置修改
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/08/20170508pythonphp/" rel="prev" title="Python脚本转换为php脚本">
+                Python脚本转换为php脚本 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.jpg"
+               alt="罗宁" />
+          <p class="site-author-name" itemprop="name">罗宁</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liuhonghe.me" title="若我若鱼" target="_blank">若我若鱼</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#华为云网盘脚本"><span class="nav-number">1.</span> <span class="nav-text">华为云网盘脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抓取百度云脚本"><span class="nav-number">2.</span> <span class="nav-text">抓取百度云脚本</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  <!--&copy;--> 
+  <!--span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span-->
+  <!--span class="author" itemprop="copyrightHolder">罗宁</span-->
+</div>
+
+<div class="powered-by">
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+</div>
+
+<!--div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

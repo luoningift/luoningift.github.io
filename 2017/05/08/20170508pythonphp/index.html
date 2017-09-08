@@ -1,0 +1,671 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,Php," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="php脚本123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python脚本转换为php脚本">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/20170508pythonphp/index.html">
+<meta property="og:site_name" content="罗宁的博客">
+<meta property="og:description" content="php脚本123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101">
+<meta property="og:updated_time" content="2017-09-08T15:13:19.316Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python脚本转换为php脚本">
+<meta name="twitter:description" content="php脚本123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/08/20170508pythonphp/"/>
+
+
+
+
+
+  <title> Python脚本转换为php脚本 | 罗宁的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">罗宁的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/20170508pythonphp/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="罗宁">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="罗宁的博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="罗宁的博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python脚本转换为php脚本
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-08T18:40:16+00:00">
+                2017-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Php/" itemprop="url" rel="index">
+                    <span itemprop="name">Php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="php脚本"><a href="#php脚本" class="headerlink" title="php脚本"></a>php脚本</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 解析心电图</div><div class="line"> *</div><div class="line"> * 功能1：</div><div class="line"> * 功能2：</div><div class="line"> *</div><div class="line"> * <span class="doctag">@author</span> luoning&lt;lniftt@163.com&gt;</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">JudgeEcg</span></span></div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">parse</span><span class="params">($path)</span></span></div><div class="line">    &#123;</div><div class="line">        $result = [<span class="string">"start time(ms):"</span>];</div><div class="line">        <span class="keyword">if</span> (!is_file($path)) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="keyword">Exception</span>($path . <span class="string">" is not exists"</span>);</div><div class="line">        &#125;</div><div class="line">        $medInfo = file_get_contents($path);</div><div class="line">        $medLength = strlen($medInfo);</div><div class="line">        $res = unpack(<span class="string">"a3a1/aa2/a12a3/a8a4/aa5/a"</span> . ($medLength - <span class="number">25</span>) . <span class="string">"last"</span>, $medInfo);</div><div class="line">        <span class="keyword">if</span> ($res[<span class="string">"a1"</span>] != <span class="string">'MED'</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="keyword">Exception</span>($path . <span class="string">" is not a med file"</span>);</div><div class="line">        &#125;</div><div class="line">        $ver = hexdec(bin2hex($res[<span class="string">'a2'</span>]));</div><div class="line">        $res[<span class="string">'a4'</span>] = hexdec(bin2hex($res[<span class="string">'a4'</span>]));</div><div class="line">        $result[] = $res[<span class="string">'a4'</span>];</div><div class="line">        $res[<span class="string">'a5'</span>] = hexdec(bin2hex($res[<span class="string">'a5'</span>]));</div><div class="line">        <span class="keyword">if</span> (!in_array($res[<span class="string">'a5'</span>], [<span class="number">2</span>, <span class="number">3</span>])) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="keyword">Exception</span>(<span class="string">"more than 2 kinds num, exit."</span>);</div><div class="line">        &#125;</div><div class="line">        $buff2 = $medLength - <span class="number">25</span> - <span class="number">6</span> * $res[<span class="string">'a5'</span>];</div><div class="line">        $zengya = unpack(<span class="string">"a&#123;$res['a5']&#125;b1/a&#123;$res['a5']&#125;b2/a&#123;$res['a5']&#125;b3/a&#123;$res['a5']&#125;b4/a&#123;$res['a5']&#125;b5/a&#123;$res['a5']&#125;b6/a&#123;$buff2&#125;last"</span>, $res[<span class="string">'last'</span>]);</div><div class="line">        $zengya[<span class="string">'b1'</span>] = bin2hex($zengya[<span class="string">'b1'</span>]);</div><div class="line">        $zengya[<span class="string">'b2'</span>] = hexdec(bin2hex($zengya[<span class="string">'b2'</span>]));</div><div class="line">        $zengya[<span class="string">'b3'</span>] = bin2hex($zengya[<span class="string">'b3'</span>]);</div><div class="line">        $zengya[<span class="string">'b4'</span>] = bin2hex($zengya[<span class="string">'b4'</span>]);</div><div class="line">        $zengya[<span class="string">'b5'</span>] = bin2hex($zengya[<span class="string">'b5'</span>]);</div><div class="line">        $zengya[<span class="string">'b6'</span>] = bin2hex($zengya[<span class="string">'b6'</span>]);</div><div class="line">        <span class="keyword">if</span> (substr($zengya[<span class="string">'b1'</span>], <span class="number">0</span>, <span class="number">2</span>) != <span class="string">"00"</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="keyword">Exception</span>(<span class="string">"所处理数据并非单导联,暂不支持"</span>);</div><div class="line">        &#125;</div><div class="line">        $result[] = <span class="string">"ecg type:"</span>;</div><div class="line">        $result[] = <span class="string">"1"</span>;</div><div class="line">        <span class="keyword">if</span> (intval(hexdec(substr($zengya[<span class="string">'b6'</span>], <span class="number">0</span>, <span class="number">2</span>))) == <span class="number">1</span>) &#123;</div><div class="line">            $result[] = <span class="string">"采样增益类型为:"</span>;</div><div class="line">            $result[] = <span class="string">"200"</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $result[] = <span class="string">"未知增益类型"</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (intval(hexdec(substr($zengya[<span class="string">'b5'</span>], <span class="number">0</span>, <span class="number">2</span>))) == <span class="number">3</span>) &#123;</div><div class="line">            $result[] = <span class="string">"满程电压为："</span>;</div><div class="line">            $result[] = <span class="string">"3"</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $result[] = <span class="string">"未知满程电压"</span>;</div><div class="line">        &#125;</div><div class="line">        $vate = <span class="keyword">self</span>::getHz(intval(hexdec(substr($zengya[<span class="string">'b3'</span>], <span class="number">0</span>, <span class="number">2</span>))));</div><div class="line">        <span class="keyword">if</span> ($vate) &#123;</div><div class="line">            $result[] = <span class="string">'频率为:'</span>;</div><div class="line">            $result[] = $vate;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $result[] = <span class="string">"未知采样频率."</span>;</div><div class="line">        &#125;</div><div class="line">        $result[] = <span class="string">"基准精度为："</span>;</div><div class="line">        $result[] = pow(<span class="number">2</span>, intval(hexdec(substr($zengya[<span class="string">'b4'</span>], <span class="number">0</span>, <span class="number">2</span>))));</div><div class="line">        $headSpace = <span class="keyword">self</span>::judge($ver);</div><div class="line">        $buff3 = strlen($zengya[<span class="string">'last'</span>]) - <span class="number">8</span> - <span class="number">1</span> - $headSpace;</div><div class="line">        $cInfo = unpack(<span class="string">"a8c1/a1c2/a&#123;$headSpace&#125;c3/a&#123;$buff3&#125;last"</span>, $zengya[<span class="string">'last'</span>]);</div><div class="line">        $cInfo[<span class="string">'c1'</span>] = bin2hex($cInfo[<span class="string">'c1'</span>]);</div><div class="line">        $cInfo[<span class="string">'c2'</span>] = bin2hex($cInfo[<span class="string">'c2'</span>]);</div><div class="line">        $cInfo[<span class="string">'c3'</span>] = bin2hex($cInfo[<span class="string">'c3'</span>]);</div><div class="line">        $length = hexdec($cInfo[<span class="string">'c3'</span>]);</div><div class="line">        <span class="comment">//echo "预留长度为：" . $length . PHP_EOL;</span></div><div class="line">        $buff4 = strlen($cInfo[<span class="string">'last'</span>]) - $length - <span class="number">2</span> - <span class="number">14400</span>;</div><div class="line">        <span class="comment">//format4 = "%ds2s14400s%ds"% (length, BUF4)</span></div><div class="line">        <span class="comment">//c4, d2, d3, last = struct.unpack(format4, last)</span></div><div class="line">        <span class="comment">//echo "a&#123;$length&#125;c4/a2d2/a14400d3/a&#123;$buff4&#125;last" . PHP_EOL;</span></div><div class="line">        $bInfo = unpack(<span class="string">"a&#123;$length&#125;c4/a2d2/a14400d3/a&#123;$buff4&#125;last"</span>, $cInfo[<span class="string">'last'</span>]);</div><div class="line">        $result[] = <span class="string">"data"</span>;</div><div class="line">        <span class="comment">//print c4</span></div><div class="line">        <span class="comment">//print "索引有效个数 %d "% d2</span></div><div class="line">        <span class="comment">//''' 剩余last为数据区部分,绘图专用'''</span></div><div class="line">        $bInfo[<span class="string">'last'</span>] = bin2hex($bInfo[<span class="string">'last'</span>]);</div><div class="line">        $temp = explode(<span class="string">"ffff00"</span>, $bInfo[<span class="string">'last'</span>]);</div><div class="line">        <span class="comment">//echo $bInfo['last'] . PHP_EOL;</span></div><div class="line">        $string = <span class="string">""</span>;</div><div class="line">        $stringEcg = <span class="string">""</span>;</div><div class="line">        $emp = explode(<span class="string">"ffff17"</span>, $temp[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">if</span> (count($emp) &gt; <span class="number">1</span>) &#123;</div><div class="line">            $tmpEmp = array_values(array_slice($emp, <span class="number">1</span>));</div><div class="line">            $tmpLength = strlen($tmpEmp[<span class="number">0</span>]) - <span class="number">4</span>;</div><div class="line">            $format9 = <span class="string">"a4c1/a&#123;$tmpLength&#125;c2"</span>;</div><div class="line">            <span class="keyword">if</span> (count($tmpEmp) == <span class="number">1</span>) &#123;</div><div class="line">                $stringEcg .= unpack($format9, $tmpEmp[<span class="number">0</span>])[<span class="string">'c2'</span>] . <span class="string">"\n"</span>;</div><div class="line">            &#125; <span class="keyword">elseif</span> (count($tmpEmp) == <span class="number">2</span>) &#123;</div><div class="line">                $stringEcg .= unpack($format9, $tmpEmp[<span class="number">0</span>])[<span class="string">'c2'</span>] . <span class="string">"\n"</span>;</div><div class="line">                $stringEcg .= unpack($format9, $tmpEmp[<span class="number">1</span>])[<span class="string">'c2'</span>] . <span class="string">"\n"</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        $tmpTemp = array_values(array_slice($temp, <span class="number">1</span>));</div><div class="line">        <span class="keyword">foreach</span> ($tmpTemp <span class="keyword">as</span> $k =&gt; $value) &#123;</div><div class="line">            <span class="keyword">if</span> (strpos($value, <span class="string">'ffff17'</span>) !== <span class="keyword">false</span>) &#123;</div><div class="line">                $tmpValue = array_values(array_slice(explode(<span class="string">"ffff17"</span>, $value), <span class="number">1</span>));</div><div class="line">                $tmpLength = strlen($tmpValue[<span class="number">0</span>]) - <span class="number">4</span>;</div><div class="line">                $tmpFormat = <span class="string">"a4c1/a&#123;$tmpLength&#125;c2"</span>;</div><div class="line">                <span class="keyword">foreach</span> ($tmpValue <span class="keyword">as</span> $aInfo) &#123;</div><div class="line">                    $stringEcg .= unpack($tmpFormat, $aInfo)[<span class="string">'c2'</span>] . <span class="string">"\n"</span>;</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                $tmpLength = strlen($value) - <span class="number">4</span>;</div><div class="line">                $tmpFormat = <span class="string">"a4c1/a&#123;$tmpLength&#125;c2"</span>;</div><div class="line">                $string .= unpack($tmpFormat, $value)[<span class="string">'c2'</span>];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        $result[] = $string;</div><div class="line">        $result[] = <span class="string">"string------------------"</span>;</div><div class="line">        <span class="keyword">return</span> array_merge($result, <span class="keyword">self</span>::doneEcg($stringEcg));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">doneEcg</span><span class="params">($string)</span></span></div><div class="line">    &#123;</div><div class="line">        $strecg = <span class="string">''</span>;</div><div class="line">        $strrr = <span class="string">''</span>;</div><div class="line">        $string = array_values(array_slice(explode(<span class="string">"\n"</span>, $string), <span class="number">1</span>));</div><div class="line">        <span class="keyword">foreach</span> ($string <span class="keyword">as</span> $k =&gt; $v) &#123;</div><div class="line">            <span class="keyword">if</span> (!$v) &#123;</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line">            &#125;</div><div class="line">            $tmpLength = strlen($v) - <span class="number">26</span>;</div><div class="line">            $tmpFormat = <span class="string">"a2c1/a8c2/a2c3/a2c4/a2c5/a2c6/a2c7/a2c8/a&#123;$tmpLength&#125;/c9"</span>;</div><div class="line">            $tmpData = unpack($tmpFormat, $v);</div><div class="line">            <span class="comment"># r波位置 r波类型 心率 rr间期</span></div><div class="line">            $strecg .= $tmpData[<span class="string">'c2'</span>] . <span class="string">','</span> . $tmpData[<span class="string">'c4'</span>] . <span class="string">";"</span>;</div><div class="line">            $strrr .= intval(hexdec($tmpData[<span class="string">'c8'</span>])) . <span class="string">","</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> [<span class="string">"ecganalyst_data"</span>, $strecg, <span class="string">"ecg_rr"</span>, $strrr];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">judge</span><span class="params">($ver)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> $ver == <span class="number">0</span> ? <span class="number">1</span> : <span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getHz</span><span class="params">($key)</span></span></div><div class="line">    &#123;</div><div class="line">        $result = [<span class="number">100</span>, <span class="number">128</span>, <span class="number">200</span>, <span class="number">256</span>, <span class="number">500</span>, <span class="number">512</span>];</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">isset</span>($result[$key]) ? $result[$key] : <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="python脚本"><a href="#python脚本" class="headerlink" title="python脚本"></a>python脚本</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment"># encoding: utf-8</span></div><div class="line"><span class="comment"># 访问 http://tool.lu/pyc/ 查看更多信息</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> shutil</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> struct</div><div class="line"><span class="keyword">import</span> binascii</div><div class="line">DIR_MED = <span class="string">'/tmp/med/'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">switch_hz</span><span class="params">(args)</span>:</span></div><div class="line">    result = &#123;</div><div class="line">        <span class="number">0</span>: <span class="number">100</span>,</div><div class="line">        <span class="number">1</span>: <span class="number">128</span>,</div><div class="line">        <span class="number">2</span>: <span class="number">200</span>,</div><div class="line">        <span class="number">3</span>: <span class="number">256</span>,</div><div class="line">        <span class="number">4</span>: <span class="number">500</span>,</div><div class="line">        <span class="number">5</span>: <span class="number">512</span> &#125;</div><div class="line">    <span class="keyword">return</span> result.get(args)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">walk_file</span><span class="params">(filepath, BUF, format1, users)</span>:</span></div><div class="line">    </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        fp = open(filepath, <span class="string">'rb'</span>)</div><div class="line">        filedata = fp.read(BUF)</div><div class="line">        (a1, a2, a3, a4, a5, last) = struct.unpack(format1, filedata)</div><div class="line">        <span class="keyword">if</span> a1 == <span class="string">'MED'</span>:</div><div class="line">            <span class="keyword">pass</span></div><div class="line">        <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> <span class="number">2</span></div><div class="line">        ver = int(binascii.b2a_hex(a2), <span class="number">16</span>)</div><div class="line">        a4 = int(binascii.b2a_hex(a4), <span class="number">16</span>)</div><div class="line">        <span class="keyword">print</span> <span class="string">'start time(ms):'</span></div><div class="line">        <span class="keyword">print</span> a4</div><div class="line">        a5 = binascii.b2a_hex(a5)</div><div class="line">        n = int(a5, <span class="number">16</span>)</div><div class="line">        <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">            <span class="keyword">pass</span></div><div class="line">        <span class="number">1</span></div><div class="line">        <span class="keyword">print</span> <span class="string">'more than 2 kinds num, exit.'</span></div><div class="line">        BUF2 = BUF - <span class="number">25</span> - n * <span class="number">6</span></div><div class="line">        format2 = <span class="string">'%ds%ds%ds%ds%ds%ds%ds'</span> % (n, n, n, n, n, n, BUF2)</div><div class="line">        (b1, b2, b3, b4, b5, b6, last) = struct.unpack(format2, last)</div><div class="line">        b1 = binascii.b2a_hex(b1)</div><div class="line">        b3 = binascii.b2a_hex(b3)</div><div class="line">        b4 = binascii.b2a_hex(b4)</div><div class="line">        b5 = binascii.b2a_hex(b5)</div><div class="line">        b6 = binascii.b2a_hex(b6)</div><div class="line">        <span class="keyword">if</span> b1[:<span class="number">2</span>] == <span class="string">'00'</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'ecg type:'</span></div><div class="line">            <span class="keyword">print</span> <span class="string">'1'</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe6\x89\x80\xe5\xa4\x84\xe7\x90\x86\xe6\x95\xb0\xe6\x8d\xae\xe5\xb9\xb6\xe9\x9d\x9e\xe5\x8d\x95\xe5\xaf\xbc\xe8\x81\x94,\xe6\x9a\x82\xe4\xb8\x8d\xe6\x94\xaf\xe6\x8c\x81.'</span></div><div class="line">            <span class="keyword">return</span> <span class="number">9</span></div><div class="line">        <span class="keyword">if</span> b1[:<span class="number">2</span>] == <span class="string">'00'</span>(b6[:<span class="number">2</span>], <span class="number">16</span>) == <span class="number">1</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe9\x87\x87\xe6\xa0\xb7\xe5\xa2\x9e\xe7\x9b\x8a\xe7\xb1\xbb\xe5\x9e\x8b\xe4\xb8\xba:'</span></div><div class="line">            <span class="keyword">print</span> <span class="string">'200'</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe6\x9c\xaa\xe7\x9f\xa5\xe5\xa2\x9e\xe7\x9b\x8a\xe7\xb1\xbb\xe5\x9e\x8b.'</span></div><div class="line">        <span class="keyword">if</span> int(b5[:<span class="number">2</span>], <span class="number">16</span>) == <span class="number">3</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe6\xbb\xa1\xe7\xa8\x8b\xe7\x94\xb5\xe5\x8e\x8b\xe4\xb8\xba\xef\xbc\x9a'</span></div><div class="line">            <span class="keyword">print</span> <span class="string">'3'</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe6\x9c\xaa\xe7\x9f\xa5\xe6\xbb\xa1\xe7\xa8\x8b\xe7\x94\xb5\xe5\x8e\x8b'</span></div><div class="line">        </div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            hertz = switch_hz(int(b3[:<span class="number">2</span>], <span class="number">16</span>))</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe9\xa2\x91\xe7\x8e\x87\xe4\xb8\xba:'</span></div><div class="line">            <span class="keyword">print</span> hertz</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'\xe6\x9c\xaa\xe7\x9f\xa5\xe9\x87\x87\xe6\xa0\xb7\xe9\xa2\x91\xe7\x8e\x87.'</span></div><div class="line">            <span class="keyword">return</span> <span class="number">9</span></div><div class="line"></div><div class="line">        <span class="keyword">print</span> <span class="string">'\xe5\x9f\xba\xe7\xba\xbf\xe7\xb2\xbe\xe5\xba\xa6\xe4\xb8\xba:'</span></div><div class="line">        <span class="keyword">print</span> pow(<span class="number">2</span>, int(b4[:<span class="number">2</span>], <span class="number">16</span>))</div><div class="line">        headspace = judge(ver)</div><div class="line">        BUF3 = len(last) - <span class="number">8</span> - <span class="number">1</span> - headspace</div><div class="line">        format3 = <span class="string">'8s1s%ds%ds'</span> % (headspace, BUF3)</div><div class="line">        (c1, c2, c3, last) = struct.unpack(format3, last)</div><div class="line">        c3 = binascii.b2a_hex(c3)</div><div class="line">        length = int(c3, <span class="number">16</span>)</div><div class="line">        BUF4 = len(last) - length - <span class="number">2</span> - <span class="number">14400</span></div><div class="line">        format4 = <span class="string">'%ds2s14400s%ds'</span> % (length, BUF4)</div><div class="line">        (c4, d2, d3, last) = struct.unpack(format4, last)</div><div class="line">        last = binascii.b2a_hex(last)</div><div class="line">        temp = last.split(<span class="string">'ffff00'</span>)</div><div class="line">        string = <span class="string">''</span></div><div class="line">        stringecg = <span class="string">''</span></div><div class="line">        </div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            emp = temp[<span class="number">0</span>].split(<span class="string">'ffff17'</span>)[<span class="number">1</span>:]</div><div class="line">            format9 = <span class="string">'4s%ds'</span> % (len(emp[<span class="number">0</span>]) - <span class="number">4</span>)</div><div class="line">            <span class="keyword">if</span> len(emp) == <span class="number">1</span>:</div><div class="line">                stringecg += struct.unpack(format9, emp[<span class="number">0</span>])[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">            <span class="keyword">elif</span> len(emp) == <span class="number">2</span>:</div><div class="line">                stringecg += struct.unpack(format9, emp[<span class="number">0</span>])[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                stringecg += struct.unpack(format9, emp[<span class="number">1</span>])[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            <span class="keyword">pass</span></div><div class="line"></div><div class="line">        <span class="keyword">for</span> nn <span class="keyword">in</span> temp[<span class="number">1</span>:]:</div><div class="line">            <span class="keyword">if</span> <span class="string">'ffff17'</span> <span class="keyword">in</span> nn:</div><div class="line">                mum = nn.split(<span class="string">'ffff17'</span>)</div><div class="line">                mumber = mum[<span class="number">0</span>]</div><div class="line">                format5 = <span class="string">'4s%ds'</span> % (len(mumber) - <span class="number">4</span>)</div><div class="line">                string += struct.unpack(format5, mumber)[<span class="number">1</span>]</div><div class="line">                </div><div class="line">                <span class="keyword">try</span>:</div><div class="line">                    <span class="keyword">if</span> len(mum) == <span class="number">2</span>:</div><div class="line">                        mumecg = mum[<span class="number">1</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                    <span class="keyword">elif</span> len(mum) == <span class="number">3</span>:</div><div class="line">                        mumecg1 = mum[<span class="number">1</span>]</div><div class="line">                        mumecg2 = mum[<span class="number">2</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg1) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg1)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg2)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                    <span class="keyword">elif</span> len(mum) == <span class="number">4</span>:</div><div class="line">                        mumecg1 = mum[<span class="number">1</span>]</div><div class="line">                        mumecg2 = mum[<span class="number">2</span>]</div><div class="line">                        mumecg3 = mum[<span class="number">3</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg1) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg1)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg2)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg3)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                    <span class="keyword">elif</span> len(mum) == <span class="number">5</span>:</div><div class="line">                        mumecg1 = mum[<span class="number">1</span>]</div><div class="line">                        mumecg2 = mum[<span class="number">2</span>]</div><div class="line">                        mumecg3 = mum[<span class="number">3</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">4</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg1) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg1)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg2)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg3)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg4)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                    <span class="keyword">elif</span> len(mum) == <span class="number">6</span>:</div><div class="line">                        mumecg1 = mum[<span class="number">1</span>]</div><div class="line">                        mumecg2 = mum[<span class="number">2</span>]</div><div class="line">                        mumecg3 = mum[<span class="number">3</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">4</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">5</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg1) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg1)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg2)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg3)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg4)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg5)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                    <span class="keyword">else</span>:</div><div class="line">                        mumecg1 = mum[<span class="number">1</span>]</div><div class="line">                        mumecg2 = mum[<span class="number">2</span>]</div><div class="line">                        mumecg3 = mum[<span class="number">3</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">4</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">5</span>]</div><div class="line">                        mumecg4 = mum[<span class="number">6</span>]</div><div class="line">                        format7 = <span class="string">'4s%ds'</span> % (len(mumecg1) - <span class="number">4</span>)</div><div class="line">                        stringecg += struct.unpack(format7, mumecg1)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg2)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg3)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg4)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg5)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                        stringecg += struct.unpack(format7, mumecg6)[<span class="number">1</span>] + <span class="string">'\n'</span></div><div class="line">                <span class="keyword">except</span> Exception,e:</div><div class="line">                    <span class="keyword">continue</span></div><div class="line">            format6 = <span class="string">'4s%ds'</span> % (len(nn) - <span class="number">4</span>)</div><div class="line">            string += struct.unpack(format6, nn)[<span class="number">1</span>]</div><div class="line">        </div><div class="line">        <span class="keyword">print</span> <span class="string">'data'</span></div><div class="line">        <span class="keyword">print</span> string</div><div class="line">        donecg(stringecg)</div><div class="line">        </div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            del_med(filepath)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'fail to del '</span></div><div class="line"></div><div class="line">        <span class="keyword">return</span> filepath</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">9</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">donecg</span><span class="params">(string)</span>:</span></div><div class="line">    strecg = <span class="string">''</span></div><div class="line">    strrr = <span class="string">''</span></div><div class="line">    i = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> string.split(<span class="string">'\n'</span>)[<span class="number">1</span>:]:</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> line:</div><div class="line">            <span class="keyword">break</span></div><div class="line">            <span class="keyword">continue</span></div><div class="line">        format8 = <span class="string">'2s8s2s2s2s4s2s4s%ds'</span> % (len(line) - <span class="number">26</span>)</div><div class="line">        ecganalyst = struct.unpack(format8, line)</div><div class="line">        strecg += ecganalyst[<span class="number">1</span>] + <span class="string">','</span> + ecganalyst[<span class="number">3</span>] + <span class="string">';'</span></div><div class="line">        strrr += <span class="string">'%d,'</span> % int(ecganalyst[<span class="number">7</span>], <span class="number">16</span>)</div><div class="line">    </div><div class="line">    <span class="keyword">print</span> <span class="string">'ecganalyst_data'</span></div><div class="line">    <span class="keyword">print</span> strecg</div><div class="line">    <span class="keyword">print</span> <span class="string">'ecg_rr'</span></div><div class="line">    <span class="keyword">print</span> strrr</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dealwithecg</span><span class="params">(string)</span>:</span></div><div class="line">    filename = <span class="string">'/tmp/med/ecg.txt'</span></div><div class="line">    pro_file(filename, string)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">del_med</span><span class="params">(filepath)</span>:</span></div><div class="line">    </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        <span class="keyword">if</span> os.path.exists(filepath):</div><div class="line">            </div><div class="line">            <span class="keyword">try</span>:</div><div class="line">                pathall = <span class="string">'/'</span>.join(filepath.split(<span class="string">'/'</span>)[:<span class="number">-1</span>])</div><div class="line">                os.remove(filepath)</div><div class="line">                os.rmdir(pathall)</div><div class="line">            <span class="keyword">except</span> Exception,e:</div><div class="line">                <span class="keyword">pass</span></div><div class="line"></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'fail to del '</span> + filepath</div><div class="line">        <span class="keyword">return</span> <span class="number">9</span></div><div class="line">    </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pro_name</span><span class="params">(a4, users)</span>:</span></div><div class="line">    </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        filename = <span class="string">'%d.txt'</span> % a4</div><div class="line">        filepath = DIR_MED + users + <span class="string">'/'</span> + filename</div><div class="line">        usermed = DIR_MED + users + <span class="string">'/'</span></div><div class="line">        </div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            os.mkdir(DIR_MED)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">'dir exist'</span></div><div class="line"></div><div class="line">        <span class="keyword">if</span> os.path.exists(usermed):</div><div class="line">            <span class="keyword">if</span> os.path.exists(filepath):</div><div class="line">                os.remove(filepath)</div><div class="line">                <span class="keyword">return</span> filepath</div><div class="line">            <span class="keyword">return</span> filepath</div><div class="line">        os.path.exists(usermed)</div><div class="line">        os.mkdir(usermed)</div><div class="line">        <span class="keyword">return</span> filepath</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">9</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pro_file</span><span class="params">(filename, string)</span>:</span></div><div class="line">    </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        fp = file(filename, <span class="string">'wb'</span>)</div><div class="line">        fp.write(string)</div><div class="line">        fp.close()</div><div class="line">        <span class="keyword">print</span> <span class="string">'finish'</span></div><div class="line">        <span class="keyword">print</span> <span class="string">'\xe8\xa7\xa3\xe6\x9e\x90\xe6\x96\x87\xe4\xbb\xb6\xe7\x9a\x84\xe8\xb7\xaf\xe5\xbe\x84\xe4\xb8\xba\xef\xbc\x9a'</span></div><div class="line">        <span class="keyword">print</span> filename</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">9</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">judge</span><span class="params">(ver)</span>:</span></div><div class="line">    <span class="keyword">if</span> ver == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">return</span> <span class="number">2</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsize</span><span class="params">(filepath, users)</span>:</span></div><div class="line">    </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        <span class="keyword">if</span> os.path.exists(filepath):</div><div class="line">            <span class="keyword">pass</span></div><div class="line">        <span class="number">1</span></div><div class="line">        <span class="keyword">print</span> filepath + <span class="string">' is not exists!'</span></div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">        num = os.path.getsize(filepath)</div><div class="line">        BUF = num</div><div class="line">        format1 = <span class="string">'3s1s12s8s1s%ds'</span> % (BUF - <span class="number">25</span>)</div><div class="line">        writepath = walk_file(filepath, BUF, format1, users)</div><div class="line">        <span class="keyword">return</span> writepath</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'getsize fail.return 9.'</span></div><div class="line">        <span class="keyword">return</span> <span class="number">9</span></div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Php/" rel="tag"># Php</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/08/20170908baiduvmall/" rel="next" title="Lua脚本抓取百度和华为云网盘视频地址">
+                <i class="fa fa-chevron-left"></i> Lua脚本抓取百度和华为云网盘视频地址
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/01/20170608phpunpack/" rel="prev" title="php和python的unpack对应的char类型">
+                php和python的unpack对应的char类型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/head.jpg"
+               alt="罗宁" />
+          <p class="site-author-name" itemprop="name">罗宁</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liuhonghe.me" title="若我若鱼" target="_blank">若我若鱼</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#php脚本"><span class="nav-number">1.</span> <span class="nav-text">php脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python脚本"><span class="nav-number">2.</span> <span class="nav-text">python脚本</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  <!--&copy;--> 
+  <!--span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span-->
+  <!--span class="author" itemprop="copyrightHolder">罗宁</span-->
+</div>
+
+<div class="powered-by">
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+</div>
+
+<!--div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
